@@ -31,7 +31,7 @@ memoryGameApp.factory('game', function() {
 });
 
 
-memoryGameApp.controller('GameCtrl', function GameCtrl($scope, game) {
+memoryGameApp.controller('GameCtrl', function GameCtrl($scope, game, $ionicPopup) {
   $scope.game = game;
 });
 
