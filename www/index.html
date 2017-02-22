@@ -35,11 +35,18 @@
         <script src="js/app.js"></script>
         <script src="js/game.js"></script>
     </head>
-    <body ng-app="starter" style="    background-color: rgba(232, 198, 150, 0.55);">
+    <body ng-app="starter" style="background: rgba(232, 198, 150, 0.55);
+	box-shadow: inset 0 0 100px 20px rgba(232, 198, 150, 0.55);
+	text-align: center;">
 
-    <ion-content ng-controller="GameCtrl">
-        <div>Pairs left to match: {{game.unmatchedPairs}}</div>
-
+        <div class="wrapper">
+            <div class="ribbon-wrapper-green">
+                <div class="ribbon-green">NEW</div>
+            </div>
+        </div>
+    <ion-content ng-controller="GameCtrl" >
+        <h1 contenteditable>Left to match: {{game.unmatchedPairs}}</h1>
+        
         <table>
             <tr ng-repeat="row in game.grid">
                 <td ng-repeat="tile in row" ng-click="game.flipTile(tile)">
@@ -57,9 +64,9 @@
                 </td>
             </tr>
         </table>
-
-        <div class="message">{{game.message}}</div>
-        
+        <div class="fita">
+            <div class="conteudo">{{game.message}}</div>
+        </div>
     </ion-content>
 </body>
 </html>
