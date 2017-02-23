@@ -52,6 +52,7 @@ function Game(tileNames) {
 
 // Get the bu,tton that opens the modal
 //var btn = document.getElementById("myBtn");
+//var modal = document.getElementById('myModal');
 
 // Get the <span> element that closes the modal
 //var span = document.getElementsByClassName("close")[0];
@@ -67,16 +68,16 @@ function Game(tileNames) {
 //}
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};
-document.getElementById('button').onclick = (function() {
-    document.getElementsByTagName('audio')[0].play();
-//    document.getElementsByTagName('span')[0].innerHTML = 'Hello bitchception!';
-    return false;
-});
+//window.onclick = function(event) {
+//    if (event.target === modal) {
+//        modal.style.display = "none";
+//    }
+//};
+//document.getElementById('button').onclick = (function() {
+//    document.getElementsByTagName('audio')[0].play();
+////    document.getElementsByTagName('span')[0].innerHTML = 'Hello bitchception!';
+//    return false;
+//});
 }
 
 Game.MESSAGE_CLICK = 'Click on a tile.';

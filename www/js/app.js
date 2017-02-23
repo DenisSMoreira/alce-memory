@@ -33,6 +33,19 @@ memoryGameApp.factory('game', function() {
 
 memoryGameApp.controller('GameCtrl', function GameCtrl($scope, game, $ionicPopup) {
   $scope.game = game;
+  
+  $scope.click = function(){
+    document.getElementsByTagName('audio')[0].play();
+       
+    var tileNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
+      'that-guy', 'zeppelin'];
+
+    $scope.game = new Game(tileNames);
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+
+  };
+  
 });
 
 

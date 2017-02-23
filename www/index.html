@@ -43,47 +43,47 @@
                 </div>
             </div>
 
-        <ion-content ng-controller="GameCtrl" scroll="false">
-            <!--<h1 contenteditable="false"></h1>-->
-            <div class="fita" style="width: 200px;">
-                <div class="conteudo">Left to match: {{game.unmatchedPairs}}</div>
-            </div>
-            <table>
-                <tr ng-repeat="row in game.grid">
-                    <td ng-repeat="tile in row" ng-click="game.flipTile(tile)">
-                        <div class="container">
-                            <div class="card" ng-class="{flipped: tile.flipped}">
-                                <img class="front" ng-src="img/back.png">
-                                <img class="back" ng-src="img/{{tile.title}}.png">
-                            </div>
+    <ion-content ng-controller="GameCtrl" scroll="false">
+        <!--<h1 contenteditable="false"></h1>-->
+        <div class="fita" style="width: 200px;">
+            <div class="conteudo">Left to match: {{game.unmatchedPairs}}</div>
+        </div>
+        <table>
+            <tr ng-repeat="row in game.grid">
+                <td ng-repeat="tile in row" ng-click="game.flipTile(tile)">
+                    <div class="container">
+                        <div class="card" ng-class="{flipped: tile.flipped}">
+                            <img class="front" ng-src="img/back.png">
+                            <img class="back" ng-src="img/{{tile.title}}.png">
                         </div>
-                    </td>
-                </tr>
-            </table>
-            <div class="fita">
-                <div class="conteudo">{{game.message}}</div>
-            </div>
-        </ion-content>
-    
-       <!--<button id="myBtn">Open Modal</button>-->
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="fita">
+            <div class="conteudo">{{game.message}}</div>
+        </div>
+
+
+        <!--<button id="myBtn">Open Modal</button>-->
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
-          <!-- Modal content -->
-          <div class="modal-content msg-modal">
-            <!--<img src="img/congradulation.png" alt="" />-->
-            <!--<span class="close">&times;</span>-->
-            <p class="">Parabéns finalizado em: <br>32 sec. </p>
-            <a href="#" id="button">
-                <span>Resetar!</span>
-            </a>
-          </div>
+            <!-- Modal content -->
+            <div class="modal-content msg-modal">
+                <!--<img src="img/congradulation.png" alt="" />-->
+                <!--<span class="close">&times;</span>-->
+                <p class="">Parabéns finalizado em: <br>32 sec. </p>
+                <a href="#" id="button"  ng-click="click();" >
+                    <span>Resetar!</span>
+                </a>
+            </div>
         </div>
-       
+
         <audio preload="auto">
             <source src="https://github.com/nclud/2011.beercamp.com/blob/gh-pages/audio/inception.mp3?raw=true" type="audio/mp3">
             <source src="https://github.com/nclud/2011.beercamp.com/blob/gh-pages/audio/inception.ogg?raw=true" type="audio/ogg">
         </audio>
-    
+    </ion-content>
     </body>
 </html>
