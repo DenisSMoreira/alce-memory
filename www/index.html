@@ -33,7 +33,11 @@
 
         <!-- your app's js -->
         <script src="js/app.js"></script>
-        <script src="js/game.js"></script>
+        <script src="js/constants.js"></script>
+        <script src="js/module/game.controller.js"></script>
+        <!--<script src="js/module/game.factory.js"></script>-->
+        <script src="js/component/game/game.directive.js"></script>
+        
     </head>
     <body ng-app="starter" style="background: rgba(232, 198, 150, 0.55); text-align: center;">
 
@@ -80,7 +84,7 @@
             </div>
         </div>
 
-        <audio preload="auto">
+        <audio preload="auto" id="audio">
             <source src="https://github.com/nclud/2011.beercamp.com/blob/gh-pages/audio/inception.mp3?raw=true" type="audio/mp3">
             <source src="https://github.com/nclud/2011.beercamp.com/blob/gh-pages/audio/inception.ogg?raw=true" type="audio/ogg">
         </audio>
