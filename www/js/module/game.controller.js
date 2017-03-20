@@ -6,12 +6,17 @@ memoryGameApp.controller('GameCtrl', function GameCtrl($scope, $document) {
         'that-guy', 'zeppelin'];
 
     $scope.game = new Game(TILE_NAMES);
+    
+    var myModalStart = document.getElementById('myModalStart');
+    myModalStart.style.display = "block";
+        
 
     $scope.click = function () {
         $document[0].getElementsByTagName('audio').audio.play();
         $scope.game = new Game(TILE_NAMES);
         var modal =  $document[0].getElementById('myModal');
         modal.style.display = "none";
+        myModalStart.style.display = "none";
     };
 
     function Tile(title) {
